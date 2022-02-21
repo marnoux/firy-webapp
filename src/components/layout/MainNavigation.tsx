@@ -45,6 +45,7 @@ const Header = styled.header`
 		margin: 0;
 		padding: 0;
 		overflow: hidden;
+		text-align: center;
 	}
 
 	& li {
@@ -59,7 +60,7 @@ const Header = styled.header`
 
 	& li a:hover:not(.active) {
 		background-color: #00ffcc88;
-		border-radius: 12.5px;
+		border-radius: 12.5px 5px 12.5px 5px;
 		transition: 500ms;
 	}
 
