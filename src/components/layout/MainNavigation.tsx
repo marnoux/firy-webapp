@@ -2,8 +2,10 @@ import Link from 'next/link';
 import Logo from './Logo';
 import { FC } from 'react';
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 
 const MainNavigation: FC = () => {
+	const router = useRouter();
 	return (
 		<Header>
 			<Link href='/'>
@@ -14,13 +16,18 @@ const MainNavigation: FC = () => {
 			<NavRight>
 				<ul>
 					<li>
-						<Link href='/'>
+						<Link href='/first'>
 							<a>First</a>
 						</Link>
 					</li>
 					<li>
 						<Link href='/'>
 							<a>Second</a>
+						</Link>
+					</li>
+					<li>
+						<Link href='/'>
+							<a>Third</a>
 						</Link>
 					</li>
 				</ul>
@@ -33,14 +40,11 @@ const MainNavigation: FC = () => {
 export default MainNavigation;
 
 const Header = styled.header`
-	display: inline;
-
 	& ul {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 		overflow: hidden;
-		background-color: #333;
 	}
 
 	& li {
@@ -49,22 +53,23 @@ const Header = styled.header`
 
 	& li a {
 		display: block;
-		text-align: center;
 		padding: 14px 16px;
 		text-decoration: none;
 	}
 
 	& li a:hover:not(.active) {
-		background-color: #111;
+		background-color: #00ffcc88;
+		border-radius: 12.5px;
+		transition: 500ms;
 	}
 
 	& .active {
-		background-color: #04aa6d;
+		background-color: #00ffcc;
 	}
 `;
 
 const NavRight = styled.div`
 	display: block;
-	padding: 8px;
 	float: right;
+	padding: 8px;
 `;
