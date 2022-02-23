@@ -1,7 +1,8 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
-import Layout from '../components/layout/layout';
+import Layout from '../components/layout/Layout';
 import Head from 'next/head';
+import { ThemeProvider } from '../contexts/ThemeContext';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
@@ -9,7 +10,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 			<Head>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 			</Head>
-			<Component {...pageProps} />
+			<ThemeProvider>
+				<Component {...pageProps} />
+			</ThemeProvider>
 		</Layout>
 	);
 }

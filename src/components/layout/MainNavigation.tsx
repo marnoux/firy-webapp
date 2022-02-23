@@ -6,18 +6,20 @@ import { useRouter } from 'next/router';
 
 const MainNavigation: FC = () => {
 	const router = useRouter();
+
 	return (
 		<Header>
 			<Link href='/'>
 				<a>
+					<h1>Firy</h1>
 					<Logo />
 				</a>
 			</Link>
 			<NavRight>
 				<ul>
 					<li>
-						<Link href='/first'>
-							<a>First</a>
+						<Link href='/account/signup'>
+							<a>Sign Up</a>
 						</Link>
 					</li>
 					<li>
