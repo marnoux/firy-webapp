@@ -11,7 +11,6 @@ const MainNavigation: FC = () => {
 		<Header>
 			<Link href='/'>
 				<a>
-					<h1>Firy</h1>
 					<Logo />
 				</a>
 			</Link>
