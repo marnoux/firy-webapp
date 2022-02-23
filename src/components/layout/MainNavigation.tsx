@@ -3,6 +3,7 @@ import Logo from './Logo';
 import { FC } from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import ThemeChanger from '../ui/ThemeChanger';
 
 const MainNavigation: FC = () => {
 	const router = useRouter();
@@ -30,6 +31,11 @@ const MainNavigation: FC = () => {
 						<Link href='/'>
 							<a>Third</a>
 						</Link>
+					</li>
+					<li>
+						<a>
+							<ThemeChanger />
+						</a>
 					</li>
 				</ul>
 			</NavRight>

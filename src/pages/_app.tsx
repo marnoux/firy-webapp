@@ -6,14 +6,14 @@ import { ThemeProvider } from '../contexts/ThemeContext';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
-		<Layout>
-			<Head>
-				<meta name='viewport' content='width=device-width, initial-scale=1' />
-			</Head>
-			<ThemeProvider>
+		<ThemeProvider>
+			<Layout>
+				<Head>
+					<meta name='viewport' content='width=device-width, initial-scale=1' />
+				</Head>
 				<Component {...pageProps} />
-			</ThemeProvider>
-		</Layout>
+			</Layout>{' '}
+		</ThemeProvider>
 	);
 }
 
